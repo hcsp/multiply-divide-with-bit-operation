@@ -16,6 +16,8 @@ public class MainTest {
 
         assertEquals(number / 16, Main.divide16(number));
         assertEquals(number * 16, Main.multiply16(number));
+        assertEquals(-16 / 16, Main.divide16(-16));
+        assertEquals(-1 * 16, Main.multiply16(-1));
         assertFalse(readFileContent().contains("*"));
         assertFalse(readFileContent().replaceAll("/", "").contains("/"));
     }
