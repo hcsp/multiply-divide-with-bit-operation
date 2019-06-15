@@ -1,12 +1,13 @@
 package com.github.hcsp.calculation;
 
+import java.util.Random;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public class MainTest {
     @Test
     public void test() throws Exception {
-        int number = new java.util.Random().nextInt(10000);
+        int number = new Random().nextInt(10000);
 
         Assertions.assertEquals(number / 16, Main.divide16(number));
         Assertions.assertEquals(number * 16, Main.multiply16(number));
