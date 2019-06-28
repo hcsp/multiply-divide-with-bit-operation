@@ -1,5 +1,6 @@
 package com.github.hcsp.calculation;
 
+import com.github.hcsp.test.helper.ProjectSourceFileReader;
 import java.util.Random;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -14,8 +15,7 @@ public class MainTest {
         Assertions.assertEquals(-16 / 16, Main.divide16(-16));
         Assertions.assertEquals(-1 * 16, Main.multiply16(-1));
 
-        String mainJava =
-                com.github.hcsp.test.helper.ProjectSourceFileReader.readAsString(Main.class);
+        String mainJava = ProjectSourceFileReader.readAsString(Main.class);
         Assertions.assertFalse(mainJava.contains("*"));
         Assertions.assertFalse(mainJava.replaceAll("/", "").contains("/"));
     }
