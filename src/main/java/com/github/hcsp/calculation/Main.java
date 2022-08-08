@@ -6,22 +6,22 @@ public class Main {
     public static int multiply16(int number) {
         if (number < 0) {
             number = ~number + 1;
-            number = number <<4;
+            number = number << 4;
             number = ~number + 1;
             return number;
         }
-        return number <<4;
+        return number << 4;
     }
     // 返回number除以16的结果
     // 请不要使用除号
     public static int divide16(int number) {
         if (number < 0) {
             number = ~number + 1;
-            number = number >>>4;
+            number = number >>> 4;
             number = ~number + 1;
             return number;
         }
-        return number >>>4;
+        return number >>> 4;
     }
 
     public static void main(String[] args) {
